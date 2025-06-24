@@ -626,22 +626,24 @@ public class GTMachines {
     public static MachineDefinition TUNGSTENSTEEL_CRATE = registerCrate(GTMaterials.TungstenSteel, 144,
             "Tungstensteel Crate");
 
-    public static MachineDefinition WOODEN_DRUM = registerDrum(GTMaterials.Wood, (16 * FluidType.BUCKET_VOLUME),
+    public static MachineDefinition WOODEN_DRUM = registerDrum(GTMaterials.Wood, (8 * FluidType.BUCKET_VOLUME),
             "Wooden Barrel");
-    public static MachineDefinition BRONZE_DRUM = registerDrum(GTMaterials.Bronze, (32 * FluidType.BUCKET_VOLUME),
+    public static MachineDefinition BRONZE_DRUM = registerDrum(GTMaterials.Bronze, (16 * FluidType.BUCKET_VOLUME),
             "Bronze Drum");
-    public static MachineDefinition STEEL_DRUM = registerDrum(GTMaterials.Steel, (64 * FluidType.BUCKET_VOLUME),
+    public static MachineDefinition STEEL_DRUM = registerDrum(GTMaterials.Steel, (32 * FluidType.BUCKET_VOLUME),
             "Steel Drum");
-    public static MachineDefinition ALUMINIUM_DRUM = registerDrum(GTMaterials.Aluminium,
-            (128 * FluidType.BUCKET_VOLUME), "Aluminium Drum");
-    public static MachineDefinition STAINLESS_STEEL_DRUM = registerDrum(GTMaterials.StainlessSteel,
-            (256 * FluidType.BUCKET_VOLUME), "Stainless Steel Drum");
+
     public static MachineDefinition GOLD_DRUM = registerDrum(GTMaterials.Gold, (32 * FluidType.BUCKET_VOLUME),
             "Gold Drum");
+    public static MachineDefinition ALUMINIUM_DRUM = registerDrum(GTMaterials.Aluminium,
+            (64 * FluidType.BUCKET_VOLUME), "Aluminium Drum");
+    public static MachineDefinition STAINLESS_STEEL_DRUM = registerDrum(GTMaterials.StainlessSteel,
+            (128 * FluidType.BUCKET_VOLUME), "Stainless Steel Drum");
+
     public static MachineDefinition TITANIUM_DRUM = registerDrum(GTMaterials.Titanium,
-            (512 * FluidType.BUCKET_VOLUME), "Titanium Drum");
+            (256 * FluidType.BUCKET_VOLUME), "Titanium Drum");
     public static MachineDefinition TUNGSTENSTEEL_DRUM = registerDrum(GTMaterials.TungstenSteel,
-            (1024 * FluidType.BUCKET_VOLUME), "Tungstensteel Drum");
+            (512 * FluidType.BUCKET_VOLUME), "Tungstensteel Drum");
 
     //////////////////////////////////////
     // ********** Part **********//

@@ -90,7 +90,7 @@ public class FirstDegreeMaterials {
                 .ingot(1)
                 .liquid(new FluidBuilder().temperature(1160))
                 .color(0xffe36e).secondaryColor(0x935828).iconSet(SHINY)
-                .appendFlags(EXT2_METAL, MORTAR_GRINDABLE)
+                .appendFlags(EXT2_METAL, MORTAR_GRINDABLE, GENERATE_RING)
                 .components(Zinc, 1, Copper, 3)
                 .rotorStats(130, 120, 3.0f, 152)
                 .itemPipeProperties(2048, 1)

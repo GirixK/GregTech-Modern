@@ -974,29 +974,29 @@ public class MachineRecipeLoader {
                 .inputItems(plate, TungstenSteel, 4).outputItems(TUNGSTENSTEEL_CRATE).duration(200).circuitMeta(1)
                 .addMaterialInfo(true).save(provider);
 
-        ASSEMBLER_RECIPES.recipeBuilder("wood_barrel").EUt(16).inputItems(ItemTags.PLANKS, 4)
+        ASSEMBLER_RECIPES.recipeBuilder("wood_barrel").EUt(VA[ULV]).inputItems(ItemTags.PLANKS, 4)
                 .inputItems(rodLong, Iron, 2).outputItems(WOODEN_DRUM).duration(200).circuitMeta(2)
                 .addMaterialInfo(true).save(provider);
-        ASSEMBLER_RECIPES.recipeBuilder("bronze_drum").EUt(16).inputItems(rodLong, Bronze, 2)
+        ASSEMBLER_RECIPES.recipeBuilder("bronze_drum").EUt(VA[LV]).inputItems(rodLong, Bronze, 2)
                 .inputItems(plate, Bronze, 4).outputItems(BRONZE_DRUM).duration(200).circuitMeta(2)
                 .addMaterialInfo(true).save(provider);
-        ASSEMBLER_RECIPES.recipeBuilder("steel_drum").EUt(16).inputItems(rodLong, Steel, 2).inputItems(plate, Steel, 4)
+        ASSEMBLER_RECIPES.recipeBuilder("steel_drum").EUt(16).inputItems(rodLong, Steel, 2).inputItems(plateDouble, Steel, 4)
                 .outputItems(STEEL_DRUM).duration(200).circuitMeta(2)
                 .addMaterialInfo(true).save(provider);
-        ASSEMBLER_RECIPES.recipeBuilder("aluminium_drum").EUt(16).inputItems(rodLong, Aluminium, 2)
-                .inputItems(plate, Aluminium, 4).outputItems(ALUMINIUM_DRUM).duration(200).circuitMeta(2)
-                .addMaterialInfo(true).save(provider);
-        ASSEMBLER_RECIPES.recipeBuilder("stainless_steel_drum").EUt(16).inputItems(rodLong, StainlessSteel, 2)
-                .inputItems(plate, StainlessSteel, 4).outputItems(STAINLESS_STEEL_DRUM).duration(200).circuitMeta(2)
-                .addMaterialInfo(true).save(provider);
-        ASSEMBLER_RECIPES.recipeBuilder("gold_drum").EUt(16).inputItems(rodLong, Gold, 2).inputItems(plate, Gold, 4)
+        ASSEMBLER_RECIPES.recipeBuilder("gold_drum").EUt(VA[MV]).inputItems(rodLong, Gold, 2).inputItems(plateDouble, Gold, 4)
                 .outputItems(GOLD_DRUM).duration(200).circuitMeta(2)
                 .addMaterialInfo(true).save(provider);
-        ASSEMBLER_RECIPES.recipeBuilder("titanium_drum").EUt(16).inputItems(rodLong, Titanium, 2)
-                .inputItems(plate, Titanium, 4).outputItems(TITANIUM_DRUM).duration(200).circuitMeta(2)
+        ASSEMBLER_RECIPES.recipeBuilder("aluminium_drum").EUt(VA[MV]).inputItems(rodLong, Aluminium, 2)
+                .inputItems(plateDouble, Aluminium, 4).outputItems(ALUMINIUM_DRUM).duration(200).circuitMeta(2)
                 .addMaterialInfo(true).save(provider);
-        ASSEMBLER_RECIPES.recipeBuilder("tungstensteel_drum").EUt(16).inputItems(rodLong, TungstenSteel, 2)
-                .inputItems(plate, TungstenSteel, 4).outputItems(TUNGSTENSTEEL_DRUM).duration(200).circuitMeta(2)
+        ASSEMBLER_RECIPES.recipeBuilder("stainless_steel_drum").EUt(VA[HV]).inputItems(rodLong, StainlessSteel, 2)
+                .inputItems(plateDouble, StainlessSteel, 6).outputItems(STAINLESS_STEEL_DRUM).duration(200).circuitMeta(2)
+                .addMaterialInfo(true).save(provider);
+        ASSEMBLER_RECIPES.recipeBuilder("titanium_drum").EUt(VA[EV]).inputItems(rodLong, Titanium, 2)
+                .inputItems(plateDouble, Titanium, 6).outputItems(TITANIUM_DRUM).duration(200).circuitMeta(2)
+                .addMaterialInfo(true).save(provider);
+        ASSEMBLER_RECIPES.recipeBuilder("tungstensteel_drum").EUt(VA[IV]).inputItems(rodLong, TungstenSteel, 2)
+                .inputItems(plateDouble, TungstenSteel, 8).outputItems(TUNGSTENSTEEL_DRUM).duration(200).circuitMeta(2)
                 .addMaterialInfo(true).save(provider);
 
         ASSEMBLER_RECIPES.recipeBuilder("duct_tape_polyethylene").EUt(VA[LV]).inputItems(foil, Polyethylene, 4)
@@ -1021,6 +1021,7 @@ public class MachineRecipeLoader {
         ASSEMBLER_RECIPES.recipeBuilder("fluid_cell_large_steel")
                 .inputItems(plateDouble, Steel, 2)
                 .inputItems(ring, Bronze, 2)
+                .inputItems(new ItemStack(Items.GLASS_PANE))
                 .outputItems(FLUID_CELL_LARGE_STEEL)
                 .duration(200).EUt(VA[LV])
                 .addMaterialInfo(true).save(provider);
@@ -1028,29 +1029,41 @@ public class MachineRecipeLoader {
         ASSEMBLER_RECIPES.recipeBuilder("fluid_cell_large_aluminium")
                 .inputItems(plateDouble, Aluminium, 2)
                 .inputItems(ring, Silver, 2)
+                .inputItems(new ItemStack(Items.GLASS_PANE))
                 .outputItems(FLUID_CELL_LARGE_ALUMINIUM)
-                .duration(200).EUt(64)
+                .duration(200).EUt(VA[MV])
                 .addMaterialInfo(true).save(provider);
 
         ASSEMBLER_RECIPES.recipeBuilder("fluid_cell_large_stainless_steel")
                 .inputItems(plateDouble, StainlessSteel, 3)
                 .inputItems(ring, Electrum, 3)
+                .inputItems(new ItemStack(Items.GLASS_PANE))
                 .outputItems(FLUID_CELL_LARGE_STAINLESS_STEEL)
+                .duration(200).EUt(VA[HV])
+                .addMaterialInfo(true).save(provider);
+
+        ASSEMBLER_RECIPES.recipeBuilder("fluid_cell_large_gold")
+                .inputItems(plateDouble, Gold, 2)
+                .inputItems(ring, Brass, 3)
+                .inputItems(new ItemStack(Items.GLASS_PANE))
+                .outputItems(FLUID_CELL_LARGE_GOLD)
                 .duration(200).EUt(VA[MV])
                 .addMaterialInfo(true).save(provider);
 
         ASSEMBLER_RECIPES.recipeBuilder("fluid_cell_large_titanium")
                 .inputItems(plateDouble, Titanium, 3)
                 .inputItems(ring, RoseGold, 3)
+                .inputItems(new ItemStack(Items.GLASS_PANE))
                 .outputItems(FLUID_CELL_LARGE_TITANIUM)
-                .duration(200).EUt(256)
+                .duration(200).EUt(VA[EV])
                 .addMaterialInfo(true).save(provider);
 
         ASSEMBLER_RECIPES.recipeBuilder("fluid_cell_large_tungstensteel")
                 .inputItems(plateDouble, TungstenSteel, 4)
                 .inputItems(ring, Platinum, 4)
+                .inputItems(new ItemStack(Items.GLASS_PANE))
                 .outputItems(FLUID_CELL_LARGE_TUNGSTEN_STEEL)
-                .duration(200).EUt(VA[HV])
+                .duration(200).EUt(VA[IV])
                 .addMaterialInfo(true).save(provider);
     }
 

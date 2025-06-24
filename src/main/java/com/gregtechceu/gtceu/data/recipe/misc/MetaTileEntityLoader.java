@@ -1052,16 +1052,10 @@ public class MetaTileEntityLoader {
         VanillaRecipeHelper.addShapedRecipe(provider, true, "steel_drum", GTMachines.STEEL_DRUM.asStack(), " h ", "PRP",
                 "PRP", 'P', new MaterialEntry(TagPrefix.plate, GTMaterials.Steel), 'R',
                 new MaterialEntry(TagPrefix.rodLong, GTMaterials.Steel));
-        VanillaRecipeHelper.addShapedRecipe(provider, true, "aluminium_drum", GTMachines.ALUMINIUM_DRUM.asStack(),
-                " h ", "PRP", "PRP", 'P', new MaterialEntry(TagPrefix.plate, GTMaterials.Aluminium), 'R',
-                new MaterialEntry(TagPrefix.rodLong, GTMaterials.Aluminium));
-        VanillaRecipeHelper.addShapedRecipe(provider, true, "stainless_steel_drum",
-                GTMachines.STAINLESS_STEEL_DRUM.asStack(), " h ", "PRP", "PRP", 'P',
-                new MaterialEntry(TagPrefix.plate, GTMaterials.StainlessSteel), 'R',
-                new MaterialEntry(TagPrefix.rodLong, GTMaterials.StainlessSteel));
-        VanillaRecipeHelper.addShapedRecipe(provider, true, "gold_drum", GTMachines.GOLD_DRUM.asStack(), " h ", "PRP",
-                "PRP", 'P', new MaterialEntry(TagPrefix.plate, GTMaterials.Gold), 'R',
-                new MaterialEntry(TagPrefix.rodLong, GTMaterials.Gold));
+
+
+        VanillaRecipeHelper.addShapedRecipe(provider, true, "steel_cell", GTItems.FLUID_CELL_LARGE_STEEL.asStack(), " R ", "PGP", " R ", 'R', new MaterialEntry(TagPrefix.ring, GTMaterials.Bronze),
+        'P', new MaterialEntry(TagPrefix.plateDouble, GTMaterials.Steel), 'G', Items.GLASS_PANE);
 
         // Hermetic Casings
         VanillaRecipeHelper.addShapedRecipe(provider, true, "hermetic_casing_lv", GTBlocks.HERMETIC_CASING_LV.asStack(),
