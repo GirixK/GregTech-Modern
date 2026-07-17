@@ -5320,7 +5320,8 @@
 <ul>
 <li>The <code>MetaMachineBlockEntity</code>(MMBE) class has been removed, and <code>MetaMachine</code>(MM) is now a BlockEntity.</li>
 <li>Most methods and properties of MMBE have been moved onto MM.</li>
-<li>The <code>IMachineBlockEntity</code> interface has been removed. Use <code>MetaMachineBlock</code> directly instead.</li>
+<li>The <code>IMachineBlock</code> interface has been removed. Use <code>MetaMachineBlock</code> directly instead.</li>
+<li>The <code>IMachineBlockEntity</code> interface has been removed. Use <code>MetaMachine</code> directly instead.</li>
 <li>Many methods common to all block entities have been moved to the <code>IGregtechBlockEntity</code> interface.</li>
 <li>Machine instance creation functions have signature <code>(BlockEntityCreationInfo) -&gt; MetaMachine</code> instead of <code>(IMachineBlockEntity) -&gt; MetaMachine</code> </li>
 </ul>
@@ -5437,6 +5438,7 @@ A few regexes for fixing all the MCMeta files is follows, run them in order:</p>
 <li><code>GTUtil.getMoltenFluid(Material)</code> has been moved to <code>Material.getHotFluid()</code>.</li>
 <li><code>ICopyable::copyConfig</code>'s <code>CompoundTag</code> argument should now be mutated by reference instead of a new one returned (and thus, the return type has been changed to <code>void</code>).</li>
 <li>Tiered Chance Boosting has been formally removed from the API (as it was deprecated in v7.0.) <code>ChancedInput</code> and <code>ChancedOutput</code> kubeJS calls will throw errors if they still had chance boost values as arguments.</li>
+<li>Any custom <code>IDistinctPart</code>'s will have to implement <code>supportsDistinct</code> if they don't extend <code>ItemBusPartMachine</code>.</li>
 </ul>
 
 
