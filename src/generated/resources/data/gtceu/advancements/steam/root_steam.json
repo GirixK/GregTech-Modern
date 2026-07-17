@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "got_copper_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:copper_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "gtceu:textures/gui/advancements/background.png",
+    "description": {
+      "translate": "gtceu.advancement.root_steam.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "gtceu:bronze_machine_casing"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "gtceu.advancement.root_steam.name"
+    }
+  },
+  "requirements": [
+    [
+      "got_copper_ingot"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -3,6 +3,7 @@ package com.gregtechceu.gtceu.data;
 import com.gregtechceu.gtceu.api.registry.registrate.provider.GTBlockstateProvider;
 import com.gregtechceu.gtceu.common.registry.GTRegistration;
 import com.gregtechceu.gtceu.core.mixins.registrate.RegistrateDataProviderAccessor;
+import com.gregtechceu.gtceu.data.advancements.AdvancementHandler;
 import com.gregtechceu.gtceu.data.lang.LangHandler;
 import com.gregtechceu.gtceu.data.model.BlockstateModelLoader;
 import com.gregtechceu.gtceu.data.tags.*;
@@ -29,5 +30,6 @@ public class GregTechDatagen {
         GTRegistration.REGISTRATE.addDataGenerator(ProviderType.FLUID_TAGS, FluidTagLoader::init);
         GTRegistration.REGISTRATE.addDataGenerator(ProviderType.ENTITY_TAGS, EntityTypeTagLoader::init);
         GTRegistration.REGISTRATE.addDataGenerator(ProviderType.LANG, LangHandler::init);
+        GTRegistration.REGISTRATE.addDataGenerator(ProviderType.ADVANCEMENT, AdvancementHandler::init);
     }
 }

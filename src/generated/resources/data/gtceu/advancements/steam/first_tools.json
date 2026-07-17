@@ -1,0 +1,31 @@
+{
+  "parent": "gtceu:steam/root_steam",
+  "criteria": {
+    "gt_placeholder_criteria": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "gtceu:textures/gui/advancements/background.png",
+    "description": {
+      "translate": "gtceu.advancement.steam.1_first_tools.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "gtceu:flint_pickaxe",
+      "nbt": "{Damage:0,DisallowContainerItem:0b,GT.Behaviours:{TorchPlacing:1b},GT.Tool:{MaxDamage:63},HideFlags:2}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "gtceu.advancement.steam.1_first_tools.name"
+    }
+  },
+  "requirements": [
+    [
+      "gt_placeholder_criteria"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

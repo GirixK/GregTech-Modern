@@ -6,12 +6,12 @@ public class AdvancementLang {
 
     public static void init(RegistrateLangProvider provider) {
         // todo advancements
+        provider.add("gtceu.advancement.root_steam.name", "Steam Age");
+        provider.add("gtceu.advancement.root_steam.desc",
+                "Welcome to GregTech! Everything begins with your first copper ingots.");
+        provider.add("gtceu.advancement.steam.1_first_tools.name", "First Tools");
+        provider.add("gtceu.advancement.steam.1_first_tools.desc", "Craft a Hammer.");
         /*
-         * provider.add("gtceu.advancement.root_steam.name", "Steam Age");
-         * provider.add("gtceu.advancement.root_steam.desc",
-         * "Welcome to GregTech! Everything begins with your first copper ingots.");
-         * provider.add("gtceu.advancement.steam.1_first_tools.name", "First Tools");
-         * provider.add("gtceu.advancement.steam.1_first_tools.desc", "Craft a Hammer.");
          * provider.add("gtceu.advancement.steam.2_more_tools.name", "More Tools");
          * provider.add("gtceu.advancement.steam.2_more_tools.desc", "Craft a Wrench.");
          * provider.add("gtceu.advancement.steam.3_bronze_dust.name", "Bronze");
